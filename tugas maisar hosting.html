@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>maisar card</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .bg-gradient {
+        background: linear-gradient(120deg, #0077b6, #00b4d8);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .profile-container {
+        text-align: center;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+      .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+      .profile-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .profile-bio {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .links-container .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 10px 15px;
+        background: #d8f3fd;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #0077b6;
+        transition: all 0.3s ease;
+      }
+      .links-container .social-link:hover {
+        background: #0077b6;
+        color: white;
+      }
+      .links-container .social-link i {
+        margin-right: 8px;
+      }
+      .slide-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        position: relative;
+      }
+      .slide {
+        display: none;
+        text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .slide.active {
+        display: block;
+      }
+      .slide-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
+      .data-diri {
+        text-align: left;
+        padding: 20px;
+      }
+      .data-diri h2 {
+        color: #00b4d8;
+        border-bottom: 2px solid #0077b6;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+      .data-diri ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .data-diri ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #555;
+      }
+      .data-diri ul li strong {
+        color: #00b4d8;
+      }
+      .image-gallery {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+      }
+      .image-gallery img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .image-gallery img:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient">
+    <div class="profile-container">
+      <img
+        src="IMG/WhatsApp Image.jpeg"
+        alt="Profile Picture"
+        class="profile-picture"
+      />
+      <h1 class="profile-name">M ARIP MAISAR KADAR</h1>
+      <p class="profile-bio">MY BIO DAN SOSIAL MEDIA KU.</p>
+      <div class="links-container">
+        <a href="https://instagram.com/arpmaisar_" class="social-link">
+          <i data-feather="instagram"></i> Instagram
+        </a>
+        <a href="https://wa.me/082241356484" class="social-link">
+          <i data-feather="message-circle"></i> WhatsApp
+        </a>
+        <a href="mailto:muhammadarifmk6@gmail.com" class="social-link">
+          <i data-feather="mail"></i> Gmail
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide Section -->
+    <div class="slide-container">
+      <div class="slide active" id="slide1">
+        <h2>My Profile</h2>
+        <p>This is the first slide content with some introductory text.</p>
+      </div>
+      <div class="slide" id="slide2">
+        <div class="data-diri">
+          <h2>Data Pribadi</h2>
+          <ul>
+            <li><strong>Nama:</strong> M ARIP MAISAR KADAR</li>
+            <li><strong>Tanggal Lahir:</strong> 23 mei 2005</li>
+            <li><strong>Alamat:</strong> bengkulu utara.Wonoharjo,unit 8</li>
+            <li><strong>Nomor Telepon:</strong> 0822-4135-6484</li>
+            <li><strong>Jenis Kelamin:</strong> Laki-laki</li>
+            <li><strong>Agama:</strong> Islam</li>
+            <li><strong>Kewarganegaraan:</strong> Indonesia</li>
+            <li><strong>Email:</strong>muhammadarifmk6@gmail.com</li>
+            <li><strong>Status:</strong> Belum Menikah</li>
+          </ul>
+
+          <h2>Pendidikan</h2>
+          <ul>
+            <li>SD 104 Bengkulu Utara (2009-2014)</li>
+            <li>SMP 31 Bengkulu Utara (2017-2019)</li>
+            <li>SMK 11 Bengkulu Utara(2020-2023)</li>
+            <li>Universitas Muhammadiyah Bengkulu (2023)</li>
+          </ul>
+
+          <h2>Organisasi</h2>
+          <ul>
+            <li>IMM (Ikatan Mahasiswa Muhammadiyah)</li>
+            <li>Ketua Guild SFG ESPORT FF</li>
+            <li>HIMABU (Himpunan Mahasiswa Bengkulu Utara)</li>
+          </ul>
+
+          <h2>Hobi</h2>
+          <ul>
+            <li>Memancing</li>
+            <li>Berenang</li>
+            <li>Fotografi</li>
+            <li>Main game</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slide" id="slide3">
+        <h2>Gallery</h2>
+        <div class="image-gallery">
+          <img src="IMG/WhatsApp Image1.jpeg" alt="Gallery Image 1" />
+          <img src="IMG/WhatsApp Image2.jpeg" alt="Gallery Image 2" />
+          <img src="IMG/WhatsApp Image3.jpeg" alt="Gallery Image 3" />
+        </div>
+      </div>
+      <div class="slide-navigation">
+        <button class="btn btn-secondary" id="prevSlide">Previous</button>
+        <button class="btn btn-primary" id="nextSlide">Next</button>
+      </div>
+    </div>
+
+    <script>
+      feather.replace();
+
+      const slides = document.querySelectorAll(".slide");
+      const prevButton = document.getElementById("prevSlide");
+      const nextButton = document.getElementById("nextSlide");
+      let currentSlide = 0;
+
+      function updateSlides() {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("active", index === currentSlide);
+        });
+      }
+
+      prevButton.addEventListener("click", () => {
+        currentSlide = currentSlide > 0 ? currentSlide - 1 : slides.length - 1;
+        updateSlides();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentSlide = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
+        updateSlides();
+      });
+
+      updateSlides();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
